@@ -3,770 +3,818 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.0.1/Tone.min.js"></script>
     <title>S Y N T H</title>
 </head>
 <body>
-    <div id="step-sequencer" class="step-sequencer">
-        <div id="C5" class="C5">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="C#3" class="C#3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="D3" class="D3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="D#3" class="D#3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="E3" class="E3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="F3" class="F3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="F#3" class="F#3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="G3" class="G3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="G#3" class="G#3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="A3" class="A3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="A#3" class="A#3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="B3" class="B3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="C4" class="C4">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-        <hr>
-
-        <div id="C#3" class="C#3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="D3" class="D3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="D#3" class="D#3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="E3" class="E3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="F3" class="F3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="F#3" class="F#3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="G3" class="G3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="G#3" class="G#3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="A3" class="A3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="A#3" class="A#3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="B3" class="B3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="C3" class="C3">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-        <hr>
-        
-        <div id="C#2" class="C#2">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="D2" class="D2">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="D#2" class="D#2">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="E2" class="E2">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="F2" class="F2">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="F#2" class="F#2">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="G2" class="G2">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="G#2" class="G#2">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="A2" class="A2">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="A#2" class="A#2">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="B2" class="B2">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-
-        <div id="C2" class="C2">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        </div>
-    </div>
-
-    <div id='globalEnvelope' class='globalEnvelope'>
-        <span>Attack</span>
-        <input type="range" min='0.01' max='1' step='0.01' value='0.01' class="slider" id="attackSlider">
-
-        <span>Decay</span>
-        <input type="range" min='0.01' max='2' step='0.01' value='1' class="slider" id="decaySlider">
-
-        <span>Sustain</span>
-        <input type="range" min='0.01' max='1' step='0.01' value='0.5' class="slider" id="sustainSlider">
-
-        <span>Release</span>
-        <input type="range" min='0.1' max='80' step='0.1' value='1' class="slider" id="releaseSlider">
-    </div>
+<div id="synthContainer" class="synthContainer">
 
     <div id='detuneCntrl' class='detuneCntrl'>
-        <span>Detune</span>
-        <input type="range" min='0' max='50' value='0' class="slider" id="detuneSlider">
-    </div>
-
-    <div id='distortion' class='distortion'>
-        <span>Distortion</span>
-        <input type="range" min='0' max='1' value='0' step='0.01' class="slider" id="distortionSlider">
-
-        <span>Distortion Wet/Dry</span>
-        <input type="range" min='0' max='1' value='0' step='0.01' class="slider" id="distortionWetSlider">
+                <span>Detune</span>
+                <input type="range" min='0' max='50' value='0' class="slider" id="detuneSlider">
     </div>
 
     <div id='filterCntrl' class='filterCntrl'>
-        <span>Cutoff</span>
-        <input type="range" min='0' max='8000' value='8000' class="slider" id="filterSlider">
-
-        <span>Q</span>
-        <input type="range" min='0' max='20' value='0' step='0.1' class="slider" id="filterQSlider">
+            <span>Cutoff</span>
+            <input type="range" min='0' max='7000' value='4000' step='0.1' class="slider" id="filterSlider">
+    
+            <span>Q</span>
+            <input type="range" min='0' max='20' value='0' step='0.1' class="slider" id="filterQSlider">
     </div>
 
-    <div id='delayCntrl' class='delayCntrl'>
-        <span>Delay Time</span>
-        <input type="range" min='0' max='0.5' step='0.01' value='0' class="slider" id="delayTimeSlider">
-        <span>Wet/Dry</span>
-        <input type="range" min='0.0' max='0.8' step='0.01' value='0' class="slider" id="delayWetSlider">
-    </div>
-
-    <div id='reverbCntrl' class='reverbCntrl'>
-            <span>Room Size</span>
-            <input type="range" min='0' max='1' step='0.01' value='0' class="slider" id="reverbSizeSlider">
-            <span>Wet/Dry</span>
-            <input type="range" min='0.0' max='0.8' step='0.01' value='0' class="slider" id="reverbWetSlider">
+    <div id='globalEnvelope' class='globalEnvelope'>
+        <div>
+            <span>Attack</span>
+            <input type="range" min='0.01' max='0.5' step='0.01' value='0.01' class="slider" id="attackSlider">
         </div>
+        <div>
+            <span>Decay</span>
+            <input type="range" min='0.01' max='2' step='0.01' value='1' class="slider" id="decaySlider">
+        </div>
+        <div>
+            <span>Sustain</span>
+            <input type="range" min='0.01' max='1' step='0.01' value='0.5' class="slider" id="sustainSlider">
+        </div>
+        <div>  
+            <span>Release</span>
+            <input type="range" min='0.1' max='80' step='0.1' value='1' class="slider" id="releaseSlider">
+        </div>
+    </div>
+
+    <div id="step-sequencer" class="step-sequencer">
+        <div id="C5row" class="C5">
+            <span class="notename">C5</span>
+            <input id='C5-1' type="checkbox"><label for="C5-1"></label>
+            <input id='C5-2' type="checkbox"><label for="C5-2"></label>
+            <input id='C5-3' type="checkbox"><label for="C5-3"></label>
+            <input id='C5-4' type="checkbox"><label for="C5-4"></label>
+            <input id='C5-5' type="checkbox"><label for="C5-5"></label>
+            <input id='C5-6' type="checkbox"><label for="C5-6"></label>
+            <input id='C5-7' type="checkbox"><label for="C5-7"></label>
+            <input id='C5-8' type="checkbox"><label for="C5-8"></label>
+            <input id='C5-9' type="checkbox"><label for="C5-9"></label>
+            <input id='C5-10' type="checkbox"><label for="C5-10"></label>
+            <input id='C5-11' type="checkbox"><label for="C5-11"></label>
+            <input id='C5-12' type="checkbox"><label for="C5-12"></label>
+            <input id='C5-13' type="checkbox"><label for="C5-13"></label>
+            <input id='C5-14' type="checkbox"><label for="C5-14"></label>
+            <input id='C5-15' type="checkbox"><label for="C5-15"></label>
+            <input id='C5-16' type="checkbox"><label for="C5-16"></label>
+        </div>
+        
+        <div id="B4" class="B4">
+            <span>B4</span>
+            <input id='C#4-1' type="checkbox"><label for="C#4-1"></label>
+            <input id='C#4-2' type="checkbox"><label for="C#4-2"></label>
+            <input id='C#4-3' type="checkbox"><label for="C#4-3"></label>
+            <input id='C#4-4' type="checkbox"><label for="C#4-4"></label>
+            <input id='C#4-5' type="checkbox"><label for="C#4-5"></label>
+            <input id='C#4-6' type="checkbox"><label for="C#4-6"></label>
+            <input id='C#4-7' type="checkbox"><label for="C#4-7"></label>
+            <input id='C#4-8' type="checkbox"><label for="C#4-8"></label>
+            <input id='C#4-9' type="checkbox"><label for="C#4-9"></label>
+            <input id='C#4-10' type="checkbox"><label for="C#4-10"></label>
+            <input id='C#4-11' type="checkbox"><label for="C#4-11"></label>
+            <input id='C#4-12' type="checkbox"><label for="C#4-12"></label>
+            <input id='C#4-13' type="checkbox"><label for="C#4-13"></label>
+            <input id='C#4-14' type="checkbox"><label for="C#4-14"></label>
+            <input id='C#4-15' type="checkbox"><label for="C#4-15"></label>
+            <input id='C#4-16' type="checkbox"><label for="C#4-16"></label>
+        </div>
+
+        <div id="A#4" class="A#4">
+            <span class="noteLabel">A#4 </span>
+            <input id='D4-1' type="checkbox"><label for="D4-1"></label>
+            <input id='D4-2' type="checkbox"><label for="D4-2"></label>
+            <input id='D4-3' type="checkbox"><label for="D4-3"></label>
+            <input id='D4-4' type="checkbox"><label for="D4-4"></label>
+            <input id='D4-5' type="checkbox"><label for="D4-5"></label>
+            <input id='D4-6' type="checkbox"><label for="D4-6"></label>
+            <input id='D4-7' type="checkbox"><label for="D4-7"></label>
+            <input id='D4-8' type="checkbox"><label for="D4-8"></label>
+            <input id='D4-9' type="checkbox"><label for="D4-9"></label>
+            <input id='D4-10' type="checkbox"><label for="D4-10"></label>
+            <input id='D4-11' type="checkbox"><label for="D4-11"></label>
+            <input id='D4-12' type="checkbox"><label for="D4-12"></label>
+            <input id='D4-13' type="checkbox"><label for="D4-13"></label>
+            <input id='D4-14' type="checkbox"><label for="D4-14"></label>
+            <input id='D4-15' type="checkbox"><label for="D4-15"></label>
+            <input id='D4-16' type="checkbox"><label for="D4-16"></label>
+        </div>
+
+        <div id="A4" class="A4">
+            <span class="noteLabel">A4</span>
+            <input id='D#4-1' type="checkbox"><label for="D#4-1"></label>
+            <input id='D#4-2' type="checkbox"><label for="D#4-2"></label>
+            <input id='D#4-3' type="checkbox"><label for="D#4-3"></label>
+            <input id='D#4-4' type="checkbox"><label for="D#4-4"></label>
+            <input id='D#4-5' type="checkbox"><label for="D#4-5"></label>
+            <input id='D#4-6' type="checkbox"><label for="D#4-6"></label>
+            <input id='D#4-7' type="checkbox"><label for="D#4-7"></label>
+            <input id='D#4-8' type="checkbox"><label for="D#4-8"></label>
+            <input id='D#4-9' type="checkbox"><label for="D#4-9"></label>
+            <input id='D#4-10' type="checkbox"><label for="D#4-10"></label>
+            <input id='D#4-11' type="checkbox"><label for="D#4-11"></label>
+            <input id='D#4-12' type="checkbox"><label for="D#4-12"></label>
+            <input id='D#4-13' type="checkbox"><label for="D#4-13"></label>
+            <input id='D#4-14' type="checkbox"><label for="D#4-14"></label>
+            <input id='D#4-15' type="checkbox"><label for="D#4-15"></label>
+            <input id='D#4-16' type="checkbox"><label for="D#4-16"></label>
+        </div>
+
+        <div id="G#4" class="G#4">
+            <span class="noteLabel">G#4 </span>
+            <input id='E4-1' type="checkbox"><label for="E4-1"></label>
+            <input id='E4-2' type="checkbox"><label for="E4-2"></label>
+            <input id='E4-3' type="checkbox"><label for="E4-3"></label>
+            <input id='E4-4' type="checkbox"><label for="E4-4"></label>
+            <input id='E4-5' type="checkbox"><label for="E4-5"></label>
+            <input id='E4-6' type="checkbox"><label for="E4-6"></label>
+            <input id='E4-7' type="checkbox"><label for="E4-7"></label>
+            <input id='E4-8' type="checkbox"><label for="E4-8"></label>
+            <input id='E4-9' type="checkbox"><label for="E4-9"></label>
+            <input id='E4-10' type="checkbox"><label for="E4-10"></label>
+            <input id='E4-11' type="checkbox"><label for="E4-11"></label>
+            <input id='E4-12' type="checkbox"><label for="E4-12"></label>
+            <input id='E4-13' type="checkbox"><label for="E4-13"></label>
+            <input id='E4-14' type="checkbox"><label for="E4-14"></label>
+            <input id='E4-15' type="checkbox"><label for="E4-15"></label>
+            <input id='E4-16' type="checkbox"><label for="E4-16"></label>
+        </div>
+
+        <div id="G4" class="G4">
+            <span class="noteLabel">G4 </span>
+            <input id='F4-1' type="checkbox"><label for="F4-1"></label>
+            <input id='F4-2' type="checkbox"><label for="F4-2"></label>
+            <input id='F4-3' type="checkbox"><label for="F4-3"></label>
+            <input id='F4-4' type="checkbox"><label for="F4-4"></label>
+            <input id='F4-5' type="checkbox"><label for="F4-5"></label>
+            <input id='F4-6' type="checkbox"><label for="F4-6"></label>
+            <input id='F4-7' type="checkbox"><label for="F4-7"></label>
+            <input id='F4-8' type="checkbox"><label for="F4-8"></label>
+            <input id='F4-9' type="checkbox"><label for="F4-9"></label>
+            <input id='F4-10' type="checkbox"><label for="F4-10"></label>
+            <input id='F4-11' type="checkbox"><label for="F4-11"></label>
+            <input id='F4-12' type="checkbox"><label for="F4-12"></label>
+            <input id='F4-13' type="checkbox"><label for="F4-13"></label>
+            <input id='F4-14' type="checkbox"><label for="F4-14"></label>
+            <input id='F4-15' type="checkbox"><label for="F4-15"></label>
+            <input id='F4-16' type="checkbox"><label for="F4-16"></label>
+        </div>
+
+        <div id="F#4" class="F#4">
+            <span class="noteLabel">F#4 </span>
+            <input id='F#4-1' type="checkbox"><label for="F#4-1"></label>
+            <input id='F#4-2' type="checkbox"><label for="F#4-2"></label>
+            <input id='F#4-3' type="checkbox"><label for="F#4-3"></label>
+            <input id='F#4-4' type="checkbox"><label for="F#4-4"></label>
+            <input id='F#4-5' type="checkbox"><label for="F#4-5"></label>
+            <input id='F#4-6' type="checkbox"><label for="F#4-6"></label>
+            <input id='F#4-7' type="checkbox"><label for="F#4-7"></label>
+            <input id='F#4-8' type="checkbox"><label for="F#4-8"></label>
+            <input id='F#4-9' type="checkbox"><label for="F#4-9"></label>
+            <input id='F#4-10' type="checkbox"><label for="F#4-10"></label>
+            <input id='F#4-11' type="checkbox"><label for="F#4-11"></label>
+            <input id='F#4-12' type="checkbox"><label for="F#4-12"></label>
+            <input id='F#4-13' type="checkbox"><label for="F#4-13"></label>
+            <input id='F#4-14' type="checkbox"><label for="F#4-14"></label>
+            <input id='F#4-15' type="checkbox"><label for="F#4-15"></label>
+            <input id='F#4-16' type="checkbox"><label for="F#4-16"></label>
+        </div>
+
+        <div id="F4" class="F4">
+            <span class="noteLabel">F4 </span>
+            <input id='G4-1' type="checkbox"><label for="G4-1"></label>
+            <input id='G4-2' type="checkbox"><label for="G4-2"></label>
+            <input id='G4-3' type="checkbox"><label for="G4-3"></label>
+            <input id='G4-4' type="checkbox"><label for="G4-4"></label>
+            <input id='G4-5' type="checkbox"><label for="G4-5"></label>
+            <input id='G4-6' type="checkbox"><label for="G4-6"></label>
+            <input id='G4-7' type="checkbox"><label for="G4-7"></label>
+            <input id='G4-8' type="checkbox"><label for="G4-8"></label>
+            <input id='G4-9' type="checkbox"><label for="G4-9"></label>
+            <input id='G4-10' type="checkbox"><label for="G4-10"></label>
+            <input id='G4-11' type="checkbox"><label for="G4-11"></label>
+            <input id='G4-12' type="checkbox"><label for="G4-12"></label>
+            <input id='G4-13' type="checkbox"><label for="G4-13"></label>
+            <input id='G4-14' type="checkbox"><label for="G4-14"></label>
+            <input id='G4-15' type="checkbox"><label for="G4-15"></label>
+            <input id='G4-16' type="checkbox"><label for="G4-16"></label>
+        </div>
+
+        <div id="E4" class="E4">
+            <span class="noteLabel">E4 </span>
+            <input id='G#4-1' type="checkbox"><label for="G#4-1"></label>
+            <input id='G#4-2' type="checkbox"><label for="G#4-2"></label>
+            <input id='G#4-3' type="checkbox"><label for="G#4-3"></label>
+            <input id='G#4-4' type="checkbox"><label for="G#4-4"></label>
+            <input id='G#4-5' type="checkbox"><label for="G#4-5"></label>
+            <input id='G#4-6' type="checkbox"><label for="G#4-6"></label>
+            <input id='G#4-7' type="checkbox"><label for="G#4-7"></label>
+            <input id='G#4-8' type="checkbox"><label for="G#4-8"></label>
+            <input id='G#4-9' type="checkbox"><label for="G#4-9"></label>
+            <input id='G#4-10' type="checkbox"><label for="G#4-10"></label>
+            <input id='G#4-11' type="checkbox"><label for="G#4-11"></label>
+            <input id='G#4-12' type="checkbox"><label for="G#4-12"></label>
+            <input id='G#4-13' type="checkbox"><label for="G#4-13"></label>
+            <input id='G#4-14' type="checkbox"><label for="G#4-14"></label>
+            <input id='G#4-15' type="checkbox"><label for="G#4-15"></label>
+            <input id='G#4-16' type="checkbox"><label for="G#4-16"></label>
+        </div>
+
+        <div id="D#4" class="D#4">
+            <span class="noteLabel">D#4 </span>
+            <input id='A4-1' type="checkbox"><label for="A4-1"></label>
+            <input id='A4-2' type="checkbox"><label for="A4-2"></label>
+            <input id='A4-3' type="checkbox"><label for="A4-3"></label>
+            <input id='A4-4' type="checkbox"><label for="A4-4"></label>
+            <input id='A4-5' type="checkbox"><label for="A4-5"></label>
+            <input id='A4-6' type="checkbox"><label for="A4-6"></label>
+            <input id='A4-7' type="checkbox"><label for="A4-7"></label>
+            <input id='A4-8' type="checkbox"><label for="A4-8"></label>
+            <input id='A4-9' type="checkbox"><label for="A4-9"></label>
+            <input id='A4-10' type="checkbox"><label for="A4-10"></label>
+            <input id='A4-11' type="checkbox"><label for="A4-11"></label>
+            <input id='A4-12' type="checkbox"><label for="A4-12"></label>
+            <input id='A4-13' type="checkbox"><label for="A4-13"></label>
+            <input id='A4-14' type="checkbox"><label for="A4-14"></label>
+            <input id='A4-15' type="checkbox"><label for="A4-15"></label>
+            <input id='A4-16' type="checkbox"><label for="A4-16"></label>
+        </div>
+
+        <div id="D4" class="D4">
+            <span class="noteLabel">D4 </span>
+            <input id='A#4-1' type="checkbox"><label for="A#4-1"></label>
+            <input id='A#4-2' type="checkbox"><label for="A#4-2"></label>
+            <input id='A#4-3' type="checkbox"><label for="A#4-3"></label>
+            <input id='A#4-4' type="checkbox"><label for="A#4-4"></label>
+            <input id='A#4-5' type="checkbox"><label for="A#4-5"></label>
+            <input id='A#4-6' type="checkbox"><label for="A#4-6"></label>
+            <input id='A#4-7' type="checkbox"><label for="A#4-7"></label>
+            <input id='A#4-8' type="checkbox"><label for="A#4-8"></label>
+            <input id='A#4-9' type="checkbox"><label for="A#4-9"></label>
+            <input id='A#4-10' type="checkbox"><label for="A#4-10"></label>
+            <input id='A#4-11' type="checkbox"><label for="A#4-11"></label>
+            <input id='A#4-12' type="checkbox"><label for="A#4-12"></label>
+            <input id='A#4-13' type="checkbox"><label for="A#4-13"></label>
+            <input id='A#4-14' type="checkbox"><label for="A#4-14"></label>
+            <input id='A#4-15' type="checkbox"><label for="A#4-15"></label>
+            <input id='A#4-16' type="checkbox"><label for="A#4-16"></label>
+        </div>
+
+        <div id="C#4" class="C#4">
+            <span class="noteLabel">C#4 </span>
+            <input id='B4-1' type="checkbox"><label for="B4-1"></label>
+            <input id='B4-2' type="checkbox"><label for="B4-2"></label>
+            <input id='B4-3' type="checkbox"><label for="B4-3"></label>
+            <input id='B4-4' type="checkbox"><label for="B4-4"></label>
+            <input id='B4-5' type="checkbox"><label for="B4-5"></label>
+            <input id='B4-6' type="checkbox"><label for="B4-6"></label>
+            <input id='B4-7' type="checkbox"><label for="B4-7"></label>
+            <input id='B4-8' type="checkbox"><label for="B4-8"></label>
+            <input id='B4-9' type="checkbox"><label for="B4-9"></label>
+            <input id='B4-10' type="checkbox"><label for="B4-10"></label>
+            <input id='B4-11' type="checkbox"><label for="B4-11"></label>
+            <input id='B4-12' type="checkbox"><label for="B4-12"></label>
+            <input id='B4-13' type="checkbox"><label for="B4-13"></label>
+            <input id='B4-14' type="checkbox"><label for="B4-14"></label>
+            <input id='B4-15' type="checkbox"><label for="B4-15"></label>
+            <input id='B4-16' type="checkbox"><label for="B4-16"></label>
+        </div>
+
+        <div id="C4" class="C4">
+            <span class="noteLabel">C4 </span>
+            <input id='C4-1' type="checkbox"><label for="C4-1"></label>
+            <input id='C4-2' type="checkbox"><label for="C4-2"></label>
+            <input id='C4-3' type="checkbox"><label for="C4-3"></label>
+            <input id='C4-4' type="checkbox"><label for="C4-4"></label>
+            <input id='C4-5' type="checkbox"><label for="C4-5"></label>
+            <input id='C4-6' type="checkbox"><label for="C4-6"></label>
+            <input id='C4-7' type="checkbox"><label for="C4-7"></label>
+            <input id='C4-8' type="checkbox"><label for="C4-8"></label>
+            <input id='C4-9' type="checkbox"><label for="C4-9"></label>
+            <input id='C4-10' type="checkbox"><label for="C4-10"></label>
+            <input id='C4-11' type="checkbox"><label for="C4-11"></label>
+            <input id='C4-12' type="checkbox"><label for="C4-12"></label>
+            <input id='C4-13' type="checkbox"><label for="C4-13"></label>
+            <input id='C4-14' type="checkbox"><label for="C4-14"></label>
+            <input id='C4-15' type="checkbox"><label for="C4-15"></label>
+            <input id='C4-16' type="checkbox"><label for="C4-16"></label>
+        </div>
+
+        <div id="B3" class="B3">
+            <span class="noteLabel">B3 </span>
+            <input id='B3-1' type="checkbox"><label for="B3-1"></label>
+            <input id='B3-2' type="checkbox"><label for="B3-2"></label>
+            <input id='B3-3' type="checkbox"><label for="B3-3"></label>
+            <input id='B3-4' type="checkbox"><label for="B3-4"></label>
+            <input id='B3-5' type="checkbox"><label for="B3-5"></label>
+            <input id='B3-6' type="checkbox"><label for="B3-6"></label>
+            <input id='B3-7' type="checkbox"><label for="B3-7"></label>
+            <input id='B3-8' type="checkbox"><label for="B3-8"></label>
+            <input id='B3-9' type="checkbox"><label for="B3-9"></label>
+            <input id='B3-10' type="checkbox"><label for="B-10"></label>
+            <input id='B3-11' type="checkbox"><label for="B-11"></label>
+            <input id='B3-12' type="checkbox"><label for="B-12"></label>
+            <input id='B3-13' type="checkbox"><label for="B-13"></label>
+            <input id='B3-14' type="checkbox"><label for="B-14"></label>
+            <input id='B3-15' type="checkbox"><label for="B-15"></label>
+            <input id='B3-16' type="checkbox"><label for="B-16"></label>
+        </div>
+
+        <div id="A#3" class="A#3">
+            <span class="noteLabel">A#3 </span>
+            <input id='A#3-1' type="checkbox"><label for="A#3-1"></label>
+            <input id='A#3-2' type="checkbox"><label for="A#3-2"></label>
+            <input id='A#3-3' type="checkbox"><label for="A#3-3"></label>
+            <input id='A#3-4' type="checkbox"><label for="A#3-4"></label>
+            <input id='A#3-5' type="checkbox"><label for="A#3-5"></label>
+            <input id='A#3-6' type="checkbox"><label for="A#3-6"></label>
+            <input id='A#3-7' type="checkbox"><label for="A#3-7"></label>
+            <input id='A#3-8' type="checkbox"><label for="A#3-8"></label>
+            <input id='A#3-9' type="checkbox"><label for="A#3-9"></label>
+            <input id='A#3-10' type="checkbox"><label for="A#3-10"></label>
+            <input id='A#3-11' type="checkbox"><label for="A#3-11"></label>
+            <input id='A#3-12' type="checkbox"><label for="A#3-12"></label>
+            <input id='A#3-13' type="checkbox"><label for="A#3-13"></label>
+            <input id='A#3-14' type="checkbox"><label for="A#3-14"></label>
+            <input id='A#3-15' type="checkbox"><label for="A#3-15"></label>
+            <input id='A#3-16' type="checkbox"><label for="A#3-16"></label>
+        </div>
+
+        <div id="A3" class="A3">
+            <span class="noteLabel">A3 </span>
+            <input id='A3-1' type="checkbox"><label for="A3-1"></label>
+            <input id='A3-2' type="checkbox"><label for="A3-2"></label>
+            <input id='A3-3' type="checkbox"><label for="A3-3"></label>
+            <input id='A3-4' type="checkbox"><label for="A3-4"></label>
+            <input id='A3-5' type="checkbox"><label for="A3-5"></label>
+            <input id='A3-6' type="checkbox"><label for="A3-6"></label>
+            <input id='A3-7' type="checkbox"><label for="A3-7"></label>
+            <input id='A3-8' type="checkbox"><label for="A3-8"></label>
+            <input id='A3-9' type="checkbox"><label for="A3-9"></label>
+            <input id='A3-10' type="checkbox"><label for="D#3-10"></label>
+            <input id='A3-11' type="checkbox"><label for="D#3-11"></label>
+            <input id='A3-12' type="checkbox"><label for="D#3-12"></label>
+            <input id='A3-13' type="checkbox"><label for="D#3-13"></label>
+            <input id='A3-14' type="checkbox"><label for="D#3-14"></label>
+            <input id='A3-15' type="checkbox"><label for="D#3-15"></label>
+            <input id='A3-16' type="checkbox"><label for="D#3-16"></label>
+        </div>
+
+        <div id="G#3" class="G#3">
+            <span class="noteLabel">G#3 </span>
+            <input id='G#3-1' type="checkbox"><label for="G#3-1"></label>
+            <input id='G#3-2' type="checkbox"><label for="G#3-2"></label>
+            <input id='G#3-3' type="checkbox"><label for="G#3-3"></label>
+            <input id='G#3-4' type="checkbox"><label for="G#3-4"></label>
+            <input id='G#3-5' type="checkbox"><label for="G#3-5"></label>
+            <input id='G#3-6' type="checkbox"><label for="G#3-6"></label>
+            <input id='G#3-7' type="checkbox"><label for="G#3-7"></label>
+            <input id='G#3-8' type="checkbox"><label for="G#3-8"></label>
+            <input id='G#3-9' type="checkbox"><label for="G#3-9"></label>
+            <input id='G#3-10' type="checkbox"><label for="G#3-10"></label>
+            <input id='G#3-11' type="checkbox"><label for="G#3-11"></label>
+            <input id='G#3-12' type="checkbox"><label for="G#3-12"></label>
+            <input id='G#3-13' type="checkbox"><label for="G#3-13"></label>
+            <input id='G#3-14' type="checkbox"><label for="G#3-14"></label>
+            <input id='G#3-15' type="checkbox"><label for="G#3-15"></label>
+            <input id='G#3-16' type="checkbox"><label for="G#3-16"></label>
+        </div>
+
+        <div id="G3" class="G3">
+            <span class="noteLabel">G3 </span>
+            <input id='G3-1' type="checkbox"><label for="G3-1"></label>
+            <input id='G3-2' type="checkbox"><label for="G3-2"></label>
+            <input id='G3-3' type="checkbox"><label for="G3-3"></label>
+            <input id='G3-4' type="checkbox"><label for="G3-4"></label>
+            <input id='G3-5' type="checkbox"><label for="G3-5"></label>
+            <input id='G3-6' type="checkbox"><label for="G3-6"></label>
+            <input id='G3-7' type="checkbox"><label for="G3-7"></label>
+            <input id='G3-8' type="checkbox"><label for="G3-8"></label>
+            <input id='G3-9' type="checkbox"><label for="G3-9"></label>
+            <input id='G3-10' type="checkbox"><label for="G3-10"></label>
+            <input id='G3-11' type="checkbox"><label for="G3-11"></label>
+            <input id='G3-12' type="checkbox"><label for="G3-12"></label>
+            <input id='G3-13' type="checkbox"><label for="G3-13"></label>
+            <input id='G3-14' type="checkbox"><label for="G3-14"></label>
+            <input id='G3-15' type="checkbox"><label for="G3-15"></label>
+            <input id='G3-16' type="checkbox"><label for="G3-16"></label> 
+        </div>
+
+        <div id="F#3" class="F#3">
+            <span class="noteLabel">F#3 </span>
+            <input id='F#3-1' type="checkbox"><label for="F#3-1"></label>
+            <input id='F#3-2' type="checkbox"><label for="F#3-2"></label>
+            <input id='F#3-3' type="checkbox"><label for="F#3-3"></label>
+            <input id='F#3-4' type="checkbox"><label for="F#3-4"></label>
+            <input id='F#3-5' type="checkbox"><label for="F#3-5"></label>
+            <input id='F#3-6' type="checkbox"><label for="F#3-6"></label>
+            <input id='F#3-7' type="checkbox"><label for="F#3-7"></label>
+            <input id='F#3-8' type="checkbox"><label for="F#3-8"></label>
+            <input id='F#3-9' type="checkbox"><label for="F#3-9"></label>
+            <input id='F#3-10' type="checkbox"><label for="F#3-10"></label>
+            <input id='F#3-11' type="checkbox"><label for="F#3-11"></label>
+            <input id='F#3-12' type="checkbox"><label for="F#3-12"></label>
+            <input id='F#3-13' type="checkbox"><label for="F#3-13"></label>
+            <input id='F#3-14' type="checkbox"><label for="F#3-14"></label>
+            <input id='F#3-15' type="checkbox"><label for="F#3-15"></label>
+            <input id='F#3-16' type="checkbox"><label for="F#3-16"></label>
+        </div>
+
+        <div id="F3" class="F3">
+            <span class="noteLabel">F3 </span>
+            <input id='F3-1' type="checkbox"><label for="F3-1"></label>
+            <input id='F3-2' type="checkbox"><label for="F3-2"></label>
+            <input id='F3-3' type="checkbox"><label for="F3-3"></label>
+            <input id='F3-4' type="checkbox"><label for="F3-4"></label>
+            <input id='F3-5' type="checkbox"><label for="F3-5"></label>
+            <input id='F3-6' type="checkbox"><label for="F3-6"></label>
+            <input id='F3-7' type="checkbox"><label for="F3-7"></label>
+            <input id='F3-8' type="checkbox"><label for="F3-8"></label>
+            <input id='F3-9' type="checkbox"><label for="F3-9"></label>
+            <input id='F3-10' type="checkbox"><label for="F3-10"></label>
+            <input id='F3-11' type="checkbox"><label for="F3-11"></label>
+            <input id='F3-12' type="checkbox"><label for="F3-12"></label>
+            <input id='F3-13' type="checkbox"><label for="F3-13"></label>
+            <input id='F3-14' type="checkbox"><label for="F3-14"></label>
+            <input id='F3-15' type="checkbox"><label for="F3-15"></label>
+            <input id='F3-16' type="checkbox"><label for="F3-16"></label>
+        </div>
+
+        <div id="E3" class="E3">
+            <span class="noteLabel">D3 </span>
+            <input id='E3-1' type="checkbox"><label for="E3-1"></label>
+            <input id='E3-2' type="checkbox"><label for="E3-2"></label>
+            <input id='E3-3' type="checkbox"><label for="E3-3"></label>
+            <input id='E3-4' type="checkbox"><label for="E3-4"></label>
+            <input id='E3-5' type="checkbox"><label for="E3-5"></label>
+            <input id='E3-6' type="checkbox"><label for="E3-6"></label>
+            <input id='E3-7' type="checkbox"><label for="E3-7"></label>
+            <input id='E3-8' type="checkbox"><label for="E3-8"></label>
+            <input id='E3-9' type="checkbox"><label for="E3-9"></label>
+            <input id='E3-10' type="checkbox"><label for="E3-10"></label>
+            <input id='E3-11' type="checkbox"><label for="E3-11"></label>
+            <input id='E3-12' type="checkbox"><label for="E3-12"></label>
+            <input id='E3-13' type="checkbox"><label for="E3-13"></label>
+            <input id='E3-14' type="checkbox"><label for="E3-14"></label>
+            <input id='E3-15' type="checkbox"><label for="E3-15"></label>
+            <input id='E3-16' type="checkbox"><label for="E3-16"></label>
+        </div>
+
+        <div id="D#3" class="D#3">
+            <span class="noteLabel">D#3 </span>
+            <input id='D#3-1' type="checkbox"><label for="D#3-1"></label>
+            <input id='D#3-2' type="checkbox"><label for="D#3-2"></label>
+            <input id='D#3-3' type="checkbox"><label for="D#3-3"></label>
+            <input id='D#3-4' type="checkbox"><label for="D#3-4"></label>
+            <input id='D#3-5' type="checkbox"><label for="D#3-5"></label>
+            <input id='D#3-6' type="checkbox"><label for="D#3-6"></label>
+            <input id='D#3-7' type="checkbox"><label for="D#3-7"></label>
+            <input id='D#3-8' type="checkbox"><label for="D#3-8"></label>
+            <input id='D#3-9' type="checkbox"><label for="D#3-9"></label>
+            <input id='D#3-10' type="checkbox"><label for="D#3-10"></label>
+            <input id='D#3-11' type="checkbox"><label for="D#3-11"></label>
+            <input id='D#3-12' type="checkbox"><label for="D#3-12"></label>
+            <input id='D#3-13' type="checkbox"><label for="D#3-13"></label>
+            <input id='D#3-14' type="checkbox"><label for="D#3-14"></label>
+            <input id='D#3-15' type="checkbox"><label for="D#3-15"></label>
+            <input id='D#3-16' type="checkbox"><label for="D#3-16"></label>
+        </div>
+
+        <div id="D3" class="D3">
+            <span class="noteLabel">D3 </span>
+            <input id='D3-1' type="checkbox"><label for="D3-1"></label>
+            <input id='D3-2' type="checkbox"><label for="D3-2"></label>
+            <input id='D3-3' type="checkbox"><label for="D3-3"></label>
+            <input id='D3-4' type="checkbox"><label for="D3-4"></label>
+            <input id='D3-5' type="checkbox"><label for="D3-5"></label>
+            <input id='D3-6' type="checkbox"><label for="D3-6"></label>
+            <input id='D3-7' type="checkbox"><label for="D3-7"></label>
+            <input id='D3-8' type="checkbox"><label for="D3-8"></label>
+            <input id='D3-9' type="checkbox"><label for="D3-9"></label>
+            <input id='D3-10' type="checkbox"><label for="D3-10"></label>
+            <input id='D3-11' type="checkbox"><label for="D3-11"></label>
+            <input id='D3-12' type="checkbox"><label for="D3-12"></label>
+            <input id='D3-13' type="checkbox"><label for="D3-13"></label>
+            <input id='D3-14' type="checkbox"><label for="D3-14"></label>
+            <input id='D3-15' type="checkbox"><label for="D3-15"></label>
+            <input id='D3-16' type="checkbox"><label for="D3-16"></label>
+        </div>
+
+        <div id="C#3" class="C#3">
+            <span class="noteLabel">C#3 </span>
+            <input id='C#3-1' type="checkbox"><label for="C#3-1"></label>
+            <input id='C#3-2' type="checkbox"><label for="C#3-2"></label>
+            <input id='C#3-3' type="checkbox"><label for="C#3-3"></label>
+            <input id='C#3-4' type="checkbox"><label for="C#3-4"></label>
+            <input id='C#3-5' type="checkbox"><label for="C#3-5"></label>
+            <input id='C#3-6' type="checkbox"><label for="C#3-6"></label>
+            <input id='C#3-7' type="checkbox"><label for="C#3-7"></label>
+            <input id='C#3-8' type="checkbox"><label for="C#3-8"></label>
+            <input id='C#3-9' type="checkbox"><label for="C#3-9"></label>
+            <input id='C#3-10' type="checkbox"><label for="C#3-10"></label>
+            <input id='C#3-11' type="checkbox"><label for="C#3-11"></label>
+            <input id='C#3-12' type="checkbox"><label for="C#3-12"></label>
+            <input id='C#3-13' type="checkbox"><label for="C#3-13"></label>
+            <input id='C#3-14' type="checkbox"><label for="C#3-14"></label>
+            <input id='C#3-15' type="checkbox"><label for="C#3-15"></label>
+            <input id='C#3-16' type="checkbox"><label for="C#3-16"></label>
+        </div>
+
+        <div id="C32" class="C3">
+            <span class="noteLabel">C3 </span>
+            <input id='C3-1' type="checkbox"><label for="C3-1"></label>
+            <input id='C3-2' type="checkbox"><label for="C3-2"></label>
+            <input id='C3-3' type="checkbox"><label for="C3-3"></label>
+            <input id='C3-4' type="checkbox"><label for="C3-4"></label>
+            <input id='C3-5' type="checkbox"><label for="C3-5"></label>
+            <input id='C3-6' type="checkbox"><label for="C3-6"></label>
+            <input id='C3-7' type="checkbox"><label for="C3-7"></label>
+            <input id='C3-8' type="checkbox"><label for="C3-8"></label>
+            <input id='C3-9' type="checkbox"><label for="C3-9"></label>
+            <input id='C3-10' type="checkbox"><label for="C3-10"></label>
+            <input id='C3-11' type="checkbox"><label for="C3-11"></label>
+            <input id='C3-12' type="checkbox"><label for="C3-12"></label>
+            <input id='C3-13' type="checkbox"><label for="C3-13"></label>
+            <input id='C3-14' type="checkbox"><label for="C3-14"></label>
+            <input id='C3-15' type="checkbox"><label for="C3-15"></label>
+            <input id='C3-16' type="checkbox"><label for="C3-16"></label>
+        </div>
+        
+        <div id="B2" class="B2">
+            <span class="noteLabel">B2 </span>
+            <input id='B2-1' type="checkbox"><label for="B2-1"></label>
+            <input id='B2-2' type="checkbox"><label for="B2-2"></label>
+            <input id='B2-3' type="checkbox"><label for="B2-3"></label>
+            <input id='B2-4' type="checkbox"><label for="B2-4"></label>
+            <input id='B2-5' type="checkbox"><label for="B2-5"></label>
+            <input id='B2-6' type="checkbox"><label for="B2-6"></label>
+            <input id='B2-7' type="checkbox"><label for="B2-7"></label>
+            <input id='B2-8' type="checkbox"><label for="B2-8"></label>
+            <input id='B2-9' type="checkbox"><label for="B2-9"></label>
+            <input id='B2-10' type="checkbox"><label for="B2-10"></label>
+            <input id='B2-11' type="checkbox"><label for="B2-11"></label>
+            <input id='B2-12' type="checkbox"><label for="B2-12"></label>
+            <input id='B2-13' type="checkbox"><label for="B2-13"></label>
+            <input id='B2-14' type="checkbox"><label for="B2-14"></label>
+            <input id='B2-15' type="checkbox"><label for="B2-15"></label>
+            <input id='B2-16' type="checkbox"><label for="B2-16"></label>
+        </div>
+
+        <div id="A#2" class="A#2">
+            <span class="noteLabel">A#2</span>
+            <input id='A#2-1' type="checkbox"><label for="A#2-1"></label>
+            <input id='A#2-2' type="checkbox"><label for="A#2-2"></label>
+            <input id='A#2-3' type="checkbox"><label for="A#2-3"></label>
+            <input id='A#2-4' type="checkbox"><label for="A#2-4"></label>
+            <input id='A#2-5' type="checkbox"><label for="A#2-5"></label>
+            <input id='A#2-6' type="checkbox"><label for="A#2-6"></label>
+            <input id='A#2-7' type="checkbox"><label for="A#2-7"></label>
+            <input id='A#2-8' type="checkbox"><label for="A#2-8"></label>
+            <input id='A#2-9' type="checkbox"><label for="A#2-9"></label>
+            <input id='A#2-10' type="checkbox"><label for="A#2-10"></label>
+            <input id='A#2-11' type="checkbox"><label for="A#2-11"></label>
+            <input id='A#2-12' type="checkbox"><label for="A#2-12"></label>
+            <input id='A#2-13' type="checkbox"><label for="A#2-13"></label>
+            <input id='A#2-14' type="checkbox"><label for="A#2-14"></label>
+            <input id='A#2-15' type="checkbox"><label for="A#2-15"></label>
+            <input id='A#2-16' type="checkbox"><label for="A#2-16"></label>
+        </div>
+
+        <div id="A2" class="A2">
+            <span class="noteLabel">A2</span>
+            <input id='A2-1' type="checkbox"><label for="A2-1"></label>
+            <input id='A2-2' type="checkbox"><label for="A2-2"></label>
+            <input id='A2-3' type="checkbox"><label for="A2-3"></label>
+            <input id='A2-4' type="checkbox"><label for="A2-4"></label>
+            <input id='A2-5' type="checkbox"><label for="A2-5"></label>
+            <input id='A2-6' type="checkbox"><label for="A2-6"></label>
+            <input id='A2-7' type="checkbox"><label for="A2-7"></label>
+            <input id='A2-8' type="checkbox"><label for="A2-8"></label>
+            <input id='A2-9' type="checkbox"><label for="A2-9"></label>
+            <input id='A2-10' type="checkbox"><label for="A2-10"></label>
+            <input id='A2-11' type="checkbox"><label for="A2-11"></label>
+            <input id='A2-12' type="checkbox"><label for="A2-12"></label>
+            <input id='A2-13' type="checkbox"><label for="A2-13"></label>
+            <input id='A2-14' type="checkbox"><label for="A2-14"></label>
+            <input id='A2-15' type="checkbox"><label for="A2-15"></label>
+            <input id='A2-16' type="checkbox"><label for="A2-16"></label>
+        </div>
+
+        <div id="G#2" class="G#2">
+            <span class="noteLabel">G#2</span>
+            <input id='G#2-1' type="checkbox"><label for="G#2-1"></label>
+            <input id='G#2-2' type="checkbox"><label for="G#2-2"></label>
+            <input id='G#2-3' type="checkbox"><label for="G#2-3"></label>
+            <input id='G#2-4' type="checkbox"><label for="G#2-4"></label>
+            <input id='G#2-5' type="checkbox"><label for="G#2-5"></label>
+            <input id='G#2-6' type="checkbox"><label for="G#2-6"></label>
+            <input id='G#2-7' type="checkbox"><label for="G#2-7"></label>
+            <input id='G#2-8' type="checkbox"><label for="G#2-8"></label>
+            <input id='G#2-9' type="checkbox"><label for="G#2-9"></label>
+            <input id='G#2-10' type="checkbox"><label for="G#2-10"></label>
+            <input id='G#2-11' type="checkbox"><label for="G#2-11"></label>
+            <input id='G#2-12' type="checkbox"><label for="G#2-12"></label>
+            <input id='G#2-13' type="checkbox"><label for="G#2-13"></label>
+            <input id='G#2-14' type="checkbox"><label for="G#2-14"></label>
+            <input id='G#2-15' type="checkbox"><label for="G#2-15"></label>
+            <input id='G#2-16' type="checkbox"><label for="G#2-16"></label>
+        </div>
+
+        <div id="G2" class="G2">
+            <span class="noteLabel">G2</span>
+            <input id='G2-1' type="checkbox"><label for="G2-1"></label>
+            <input id='G2-2' type="checkbox"><label for="G2-2"></label>
+            <input id='G2-3' type="checkbox"><label for="G2-3"></label>
+            <input id='G2-4' type="checkbox"><label for="G2-4"></label>
+            <input id='G2-5' type="checkbox"><label for="G2-5"></label>
+            <input id='G2-6' type="checkbox"><label for="G2-6"></label>
+            <input id='G2-7' type="checkbox"><label for="G2-7"></label>
+            <input id='G2-8' type="checkbox"><label for="G2-8"></label>
+            <input id='G2-9' type="checkbox"><label for="G2-9"></label>
+            <input id='G2-10' type="checkbox"><label for="G2-10"></label>
+            <input id='G2-11' type="checkbox"><label for="G2-11"></label>
+            <input id='G2-12' type="checkbox"><label for="G2-12"></label>
+            <input id='G2-13' type="checkbox"><label for="G2-13"></label>
+            <input id='G2-14' type="checkbox"><label for="G2-14"></label>
+            <input id='G2-15' type="checkbox"><label for="G2-15"></label>
+            <input id='G2-16' type="checkbox"><label for="G2-16"></label>
+        </div>
+
+        <div id="F#2" class="F#2">
+            <span class="noteLabel">F#2</span>
+            <input id='F#2-1' type="checkbox"><label for="F#2-1"></label>
+            <input id='F#2-2' type="checkbox"><label for="F#2-2"></label>
+            <input id='F#2-3' type="checkbox"><label for="F#2-3"></label>
+            <input id='F#2-4' type="checkbox"><label for="F#2-4"></label>
+            <input id='F#2-5' type="checkbox"><label for="F#2-5"></label>
+            <input id='F#2-6' type="checkbox"><label for="F#2-6"></label>
+            <input id='F#2-7' type="checkbox"><label for="F#2-7"></label>
+            <input id='F#2-8' type="checkbox"><label for="F#2-8"></label>
+            <input id='F#2-9' type="checkbox"><label for="F#2-9"></label>
+            <input id='F#2-10' type="checkbox"><label for="F#2-10"></label>
+            <input id='F#2-11' type="checkbox"><label for="F#2-11"></label>
+            <input id='F#2-12' type="checkbox"><label for="F#2-12"></label>
+            <input id='F#2-13' type="checkbox"><label for="F#2-13"></label>
+            <input id='F#2-14' type="checkbox"><label for="F#2-14"></label>
+            <input id='F#2-15' type="checkbox"><label for="F#2-15"></label>
+            <input id='F#2-16' type="checkbox"><label for="F#2-16"></label>
+        </div>
+
+        <div id="F2" class="F2">
+            <span class="noteLabel">F2</span>
+            <input id='F2-1' type="checkbox"><label for="F2-1"></label>
+            <input id='F2-2' type="checkbox"><label for="F2-2"></label>
+            <input id='F2-3' type="checkbox"><label for="F2-3"></label>
+            <input id='F2-4' type="checkbox"><label for="F2-4"></label>
+            <input id='F2-5' type="checkbox"><label for="F2-5"></label>
+            <input id='F2-6' type="checkbox"><label for="F2-6"></label>
+            <input id='F2-7' type="checkbox"><label for="F2-7"></label>
+            <input id='F2-8' type="checkbox"><label for="F2-8"></label>
+            <input id='F2-9' type="checkbox"><label for="F2-9"></label>
+            <input id='F2-10' type="checkbox"><label for="F2-10"></label>
+            <input id='F2-11' type="checkbox"><label for="F2-11"></label>
+            <input id='F2-12' type="checkbox"><label for="F2-12"></label>
+            <input id='F2-13' type="checkbox"><label for="F2-13"></label>
+            <input id='F2-14' type="checkbox"><label for="F2-14"></label>
+            <input id='F2-15' type="checkbox"><label for="F2-15"></label>
+            <input id='F2-16' type="checkbox"><label for="F2-16"></label>
+        </div>
+
+        <div id="E2" class="E2">
+            <span class="noteLabel">E2</span>
+            <input id='E2-1' type="checkbox"><label for="E2-1"></label>
+            <input id='E2-2' type="checkbox"><label for="E2-2"></label>
+            <input id='E2-3' type="checkbox"><label for="E2-3"></label>
+            <input id='E2-4' type="checkbox"><label for="E2-4"></label>
+            <input id='E2-5' type="checkbox"><label for="E2-5"></label>
+            <input id='E2-6' type="checkbox"><label for="E2-6"></label>
+            <input id='E2-7' type="checkbox"><label for="E2-7"></label>
+            <input id='E2-8' type="checkbox"><label for="E2-8"></label>
+            <input id='E2-9' type="checkbox"><label for="E2-9"></label>
+            <input id='E2-10' type="checkbox"><label for="E2-10"></label>
+            <input id='E2-11' type="checkbox"><label for="E2-11"></label>
+            <input id='E2-12' type="checkbox"><label for="E2-12"></label>
+            <input id='E2-13' type="checkbox"><label for="E2-13"></label>
+            <input id='E2-14' type="checkbox"><label for="E2-14"></label>
+            <input id='E2-15' type="checkbox"><label for="E2-15"></label>
+            <input id='E2-16' type="checkbox"><label for="E2-16"></label>
+        </div>
+
+        <div id="D#2" class="D#2">
+            <span class="noteLabel">D#2</span>
+            <input id='D#2-1' type="checkbox"><label for="D#2-1"></label>
+            <input id='D#2-2' type="checkbox"><label for="D#2-2"></label>
+            <input id='D#2-3' type="checkbox"><label for="D#2-3"></label>
+            <input id='D#2-4' type="checkbox"><label for="D#2-4"></label>
+            <input id='D#2-5' type="checkbox"><label for="D#2-5"></label>
+            <input id='D#2-6' type="checkbox"><label for="D#2-6"></label>
+            <input id='D#2-7' type="checkbox"><label for="D#2-7"></label>
+            <input id='D#2-8' type="checkbox"><label for="D#2-8"></label>
+            <input id='D#2-9' type="checkbox"><label for="D#2-9"></label>
+            <input id='D#2-10' type="checkbox"><label for="D#2-10"></label>
+            <input id='D#2-11' type="checkbox"><label for="D#2-11"></label>
+            <input id='D#2-12' type="checkbox"><label for="D#2-12"></label>
+            <input id='D#2-13' type="checkbox"><label for="D#2-13"></label>
+            <input id='D#2-14' type="checkbox"><label for="D#2-14"></label>
+            <input id='D#2-15' type="checkbox"><label for="D#2-15"></label>
+            <input id='D#2-16' type="checkbox"><label for="D#2-16"></label>
+        </div>
+
+        <div id="D2" class="D2">
+            <span class="noteLabel">D2</span>
+            <input id='D2-1' type="checkbox"><label for="D2-1"></label>
+            <input id='D2-2' type="checkbox"><label for="D2-2"></label>
+            <input id='D2-3' type="checkbox"><label for="D2-3"></label>
+            <input id='D2-4' type="checkbox"><label for="D2-4"></label>
+            <input id='D2-5' type="checkbox"><label for="D2-5"></label>
+            <input id='D2-6' type="checkbox"><label for="D2-6"></label>
+            <input id='D2-7' type="checkbox"><label for="D2-7"></label>
+            <input id='D2-8' type="checkbox"><label for="D2-8"></label>
+            <input id='D2-9' type="checkbox"><label for="D2-9"></label>
+            <input id='D2-10' type="checkbox"><label for="D2-10"></label>
+            <input id='D2-11' type="checkbox"><label for="D2-11"></label>
+            <input id='D2-12' type="checkbox"><label for="D2-12"></label>
+            <input id='D2-13' type="checkbox"><label for="D2-13"></label>
+            <input id='D2-14' type="checkbox"><label for="D2-14"></label>
+            <input id='D2-15' type="checkbox"><label for="D2-15"></label>
+            <input id='D2-16' type="checkbox"><label for="D2-16"></label>
+        </div>
+
+        <div id="C#2" class="C#2">
+                <span class="noteLabel">C#2</span>
+                <input id='C#2-1' type="checkbox"><label for="C#2-1"></label>
+                <input id='C#2-2' type="checkbox"><label for="C#2-2"></label>
+                <input id='C#2-3' type="checkbox"><label for="C#2-3"></label>
+                <input id='C#2-4' type="checkbox"><label for="C#2-4"></label>
+                <input id='C#2-5' type="checkbox"><label for="C#2-5"></label>
+                <input id='C#2-6' type="checkbox"><label for="C#2-6"></label>
+                <input id='C#2-7' type="checkbox"><label for="C#2-7"></label>
+                <input id='C#2-8' type="checkbox"><label for="C#2-8"></label>
+                <input id='C#2-9' type="checkbox"><label for="C#2-9"></label>
+                <input id='C#2-10' type="checkbox"><label for="C#2-10"></label>
+                <input id='C#2-11' type="checkbox"><label for="C#2-11"></label>
+                <input id='C#2-12' type="checkbox"><label for="C#2-12"></label>
+                <input id='C#2-13' type="checkbox"><label for="C#2-13"></label>
+                <input id='C#2-14' type="checkbox"><label for="C#2-14"></label>
+                <input id='C#2-15' type="checkbox"><label for="C#2-15"></label>
+                <input id='C#2-16' type="checkbox"><label for="C#2-16"></label>
+        </div>
+
+        <div id="C2" class="C2">
+            <span class="noteLabel">C2</span>
+            <input id='C2-1' type="checkbox"><label for="C2-1"></label>
+            <input id='C2-2' type="checkbox"><label for="C2-2"></label>
+            <input id='C2-3' type="checkbox"><label for="C2-3"></label>
+            <input id='C2-4' type="checkbox"><label for="C2-4"></label>
+            <input id='C2-5' type="checkbox"><label for="C2-5"></label>
+            <input id='C2-6' type="checkbox"><label for="C2-6"></label>
+            <input id='C2-7' type="checkbox"><label for="C2-7"></label>
+            <input id='C2-8' type="checkbox"><label for="C2-8"></label>
+            <input id='C2-9' type="checkbox"><label for="C2-9"></label>
+            <input id='C2-10' type="checkbox"><label for="C2-10"></label>
+            <input id='C2-11' type="checkbox"><label for="C2-11"></label>
+            <input id='C2-12' type="checkbox"><label for="C2-12"></label>
+            <input id='C2-13' type="checkbox"><label for="C2-13"></label>
+            <input id='C2-14' type="checkbox"><label for="C2-14"></label>
+            <input id='C2-15' type="checkbox"><label for="C2-15"></label>
+            <input id='C2-16' type="checkbox"><label for="C2-16"></label>
+        </div>
+    
+    </div>
+
+    <div class='FX'>
+        <div id='distortion' class='distortion'>
+            <span>Distortion</span>
+            <input type="range" min='0' max='1' value='0' step='0.01' class="slider" id="distortionSlider">
+
+            <span>Distortion Wet/Dry</span>
+            <input type="range" min='0' max='1' value='0' step='0.01' class="slider" id="distortionWetSlider">
+        </div>
+
+        <div id='delayCntrl' class='delayCntrl'>
+            <span>Delay Time</span>
+            <input type="range" min='0' max='0.5' step='0.01' value='0' class="slider" id="delayTimeSlider">
+            <span>Wet/Dry</span>
+            <input type="range" min='0.0' max='0.8' step='0.01' value='0' class="slider" id="delayWetSlider">
+        </div>
+
+        <div id='reverbCntrl' class='reverbCntrl'>
+                <span>Room Size</span>
+                <input type="range" min='0' max='1' step='0.01' value='0' class="slider" id="reverbSizeSlider">
+                <span>Wet/Dry</span>
+                <input type="range" min='0.0' max='0.8' step='0.01' value='0' class="slider" id="reverbWetSlider">
+        </div>
+    </div>   
 
     <div id='tempo' class='tempo'>
         <span>Tempo</span>
         <input type="range" min='80' max='220' value='120' class="slider" id="tempoSlider">
     </div>
+
+</div>
 
     <script src="synth.js"></script>
 </body>
