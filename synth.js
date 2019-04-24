@@ -1,3 +1,13 @@
+if (Tone.context.state !== 'running') {
+    Tone.context.resume();
+};
+
+document.documentElement.addEventListener(
+    "mousedown", function(){
+      mouse_IsDown = true;
+      if (Tone.context.state !== 'running') {
+      Tone.context.resume();
+    }});
 
 const synth1 = new Tone.Synth({
     "oscillator": {
@@ -25,17 +35,17 @@ const synth2 = new Tone.Synth({
 });
 
 //Effects
-    const delay = new Tone.FeedbackDelay({
-        "delayTime": 0,
-         "feedback": 0
-    });
-    delay.toMaster();
-
     const reverb = new Tone.Freeverb({
         "roomSize": 0.1,
         "wet": 0
     });
-    reverb.connect(delay);
+    reverb.toMaster();
+
+    const delay = new Tone.FeedbackDelay({
+        "delayTime": 0,
+         "feedback": 0
+    });
+    delay.connect(reverb);
 
     const distortion = new Tone.Distortion({
         "distortion": 0.1,
@@ -66,7 +76,10 @@ let index = 0;
 
 let bpm = 120;
 Tone.Transport.scheduleRepeat(repeat, '8n');
-Tone.Transport.start();
+const seqStart = document.getElementById("seqStart");
+seqStart.addEventListener('click', () => {
+    Tone.Transport.toggle();
+});
 
 
 function repeat(time) {
@@ -133,6 +146,11 @@ releaseSlider.addEventListener('input', () => {
 });
 
 
+
+
+
+
+
 //Modulation sources
 const filterSlider = document.getElementById("filterSlider");
 filterSlider.addEventListener('input', () => {
@@ -147,6 +165,12 @@ filterQSlider.addEventListener('input', () => {
 const detuneSlider = document.getElementById("detuneSlider");
 detuneSlider.addEventListener('input', () => {
     synth2.detune.value = detuneSlider.value; 
+});
+
+const oscType = document.getElementById("oscType");
+oscType.addEventListener('change', () => {
+    synth1.oscillator.type = oscType.value; 
+    synth2.oscillator.type = oscType.value;
 });
 
 const delayTimeSlider = document.getElementById("delayTimeSlider");
@@ -198,19 +222,29 @@ filterLFOAmpSlider.addEventListener('input', () => {
     lfo1.amplitude.value = filterLFOAmpSlider.value;
 });
 
+//Master gain control
+const gainSlider = document.getElementById("gainSlider");
+gainSlider.addEventListener('input', () => {
+    Tone.Master.volume = gainSlider.value;
+});
+
+
+
+
+
+
+
 
 
 //Filter Envelope Controls
 const filterAttackSlider = document.getElementById("filterAttackSlider");
 filterAttackSlider.addEventListener('input', () => {
     filterEnv.attack = filterAttackSlider.value;
-    console.log(filterEnv.attack);
 });
 
 const filterDecaySlider = document.getElementById("filterDecaySlider");
 filterDecaySlider.addEventListener('input', () => {
     filterEnv.decay = filterDecaySlider.value;
-    console.log(filterEnv.decay);
 });
 
 const filterSustainSlider = document.getElementById("filterSustainSlider");
@@ -229,13 +263,32 @@ filterEnvAmountSlider.addEventListener('input', () => {
 });
 
 
+
+
+
+
+
+
 //Light/dark theme toggle
-document.getElementById("switch-theme").addEventListener('click', () => {
-    if (document.querySelector("body").style.backgroundColor = "white") {
-        document.querySelector("body").style.backgroundColor = "rgb(25,25,25)";
-        document.querySelector("body").style.color = "white";
+function switchTheme() {
+    const bodyBC = document.querySelector("body");
+    const button1 = document.getElementById("switch-theme");
+    const button2 = document.getElementById("seqStart");
+    //const bodyTC = document.querySelector()
+    if (bodyBC.style.backgroundColor === "white") {
+        bodyBC.style.backgroundColor = "rgb(25,25,25)";
+        bodyBC.style.color = "white";
+        button1.style.backgroundColor = "rgb(25,25,25)";
+        button1.style.color = "white";
+        button2.style.backgroundColor = "rgb(25,25,25)";
+        button2.style.color = "white";
     } else {
-        document.querySelector("body").style.backgroundColor = "white";
-        document.querySelector("body").style.color = "rgb(25,25,25)";
-    };
-});
+        bodyBC.style.backgroundColor = "white";
+        bodyBC.style.color = "rgb(25,25,25)";
+        button1.style.backgroundColor = "white";
+        button1.style.color = "rgb(25,25,25)";
+        button2.style.backgroundColor = "white";
+        button2.style.color = "rgb(25,25,25)";
+    }
+};
+    

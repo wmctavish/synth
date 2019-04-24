@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.0.1/Tone.min.js"></script>
     <title>S Y N T H</title>
 </head>
-<body>
+<body style="background-color: white; color: rgb(25,25,25)">
 <div id="synthContainer" class="synthContainer">
 
     <div id='detuneCntrl' class='detuneCntrl'>
@@ -17,6 +17,16 @@
         <div>
             <span>Detune</span>
             <input type="range" min='0' max='50' value='0' class="slider" id="detuneSlider">
+        </div>
+
+        <div>
+            <span>Osc Type</span>
+            <select id='oscType'>
+                <option value=sawtooth>Saw</option>
+                <option value=square>Square</option>
+                <option value=triangle>Triangle</option>
+                <option value=sine>Sine</option>
+            </select>
         </div>
     </div>
 
@@ -810,14 +820,13 @@
             <input id='C2-15' type="checkbox"><label for="C2-15"></label>
             <input id='C2-16' type="checkbox"><label for="C2-16"></label>
         </div>
-    
     </div>
 
     <div id='filterCntrl' class='filterCntrl'>
         <h2>Filter</h2>
         <div>
             <span>Cutoff</span>
-            <input type="range" min='0' max='7000' value='5000' step='0.1' class="slider" id="filterSlider">
+            <input type="range" min='0' max='7000' value='7000' step='0.1' class="slider" id="filterSlider">
         </div>
     
         <div>
@@ -873,7 +882,14 @@
             <span id="tempoDisplay" class="tempoDisplay">120</span>
         </div>
 
-        <button id="switch-theme">Switch Theme</button>
+        <div>
+            <span>Master Gain</span>
+            <input type="range" min='0' max='1' value='0.5' step='0.01' class="slider" id="gainSlider">
+            <span id="gainDisplay" class="gainDisplay"></span>
+        </div>
+
+        <button style="background-color: white; color: rgb(25,25,25)" id="switch-theme" onclick="switchTheme()">Switch Theme</button>
+        <button style="background-color: white; color: rgb(25,25,25)" id="seqStart">Start/Stop Sequence</button>
     </div>
 
 </div>
