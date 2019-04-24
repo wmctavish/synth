@@ -32,30 +32,31 @@ const synth2 = new Tone.Synth({
     delay.toMaster();
 
     const reverb = new Tone.Freeverb({
-        "roomSize": 0.5,
-        "wet": 0.3
+        "roomSize": 0.1,
+        "wet": 0
     });
     reverb.connect(delay);
 
     const distortion = new Tone.Distortion({
         "distortion": 0.1,
         "oversample": '4x',
-        "wet": 0.1
+        "wet": 0
     })
     distortion.connect(reverb);
 
     const filter = new Tone.Filter({
         "type": "lowpass",
-        "frequency": 9000,
+        "frequency": 7000,
         "Q": 0
     });
     filter.connect(distortion);
 
-    const gain = new Tone.Gain(0.1);
-    gain.connect(filter);
+const gain = new Tone.Gain(0.1);
+gain.connect(filter);
 
-    synth1.connect(gain);
-    synth2.connect(gain);
+synth1.connect(gain);
+synth2.connect(gain);
+
 
 //16-Step Sequencer
 const rows = document.body.querySelectorAll('.step-sequencer > div'),
@@ -76,10 +77,35 @@ function repeat(time) {
         input = row.querySelector(`input:nth-child(${step + 2})`);
     if (input.checked) 
         synth1.triggerAttackRelease(note, '8n', time),
-        synth2.triggerAttackRelease(note, '8n', time);
+        synth2.triggerAttackRelease(note, '8n', time),
+        filterEnv.triggerAttackRelease('8n');
     }
     index += 2;
 };
+
+
+//Modulation
+const lfo1 = new Tone.LFO({
+    'type': 'sine',
+    'min': -3000,
+    'max': 3000,
+    'frequency': 0.5,
+    'amplitude': 0
+});
+lfo1.start();
+lfo1.connect(filter.frequency);
+
+const filterEnv = new Tone.ScaledEnvelope({
+    "attack": 0.01,
+    "decay": 1,
+    "decayCurve": "exponential",
+    "sustain": 0.5,
+    "release": 0.1,
+    "min": 0,
+    "max": 7000
+})
+filterEnv.connect(filter.frequency);
+
 
 //Global envelop controls
 const attackSlider = document.getElementById("attackSlider");
@@ -105,6 +131,7 @@ releaseSlider.addEventListener('input', () => {
     synth1.envelope.release = (releaseSlider.value * 10) / 10;
     synth2.envelope.release = (releaseSlider.value * 10) / 10;
 });
+
 
 //Modulation sources
 const filterSlider = document.getElementById("filterSlider");
@@ -155,4 +182,46 @@ distortionSlider.addEventListener('input', () => {
 const distortionWetSlider = document.getElementById("distortionWetSlider");
 distortionWetSlider.addEventListener('input', () => {
     distortion.wet.value = distortionWetSlider.value;
+});
+
+//Filter LFO Rate
+const filterLFORateSlider = document.getElementById("filterLFORateSlider");
+filterLFORateSlider.addEventListener('input', () => {
+    lfo1.frequency.value = filterLFORateSlider.value;
+});
+
+//Filter LFO Depth
+const filterLFOAmpSlider = document.getElementById("filterLFOAmpSlider");
+filterLFOAmpSlider.addEventListener('input', () => {
+    lfo1.amplitude.value = filterLFOAmpSlider.value;
+});
+
+
+
+//Filter Envelope Controls
+const filterAttackSlider = document.getElementById("filterAttackSlider");
+filterAttackSlider.addEventListener('input', () => {
+    filterEnv.attack = filterAttackSlider.value;
+    console.log(filterEnv.attack);
+});
+
+const filterDecaySlider = document.getElementById("filterDecaySlider");
+filterDecaySlider.addEventListener('input', () => {
+    filterEnv.decay = filterDecaySlider.value;
+    console.log(filterEnv.decay);
+});
+
+const filterSustainSlider = document.getElementById("filterSustainSlider");
+sustainSlider.addEventListener('input', () => {
+    filterEnv.sustain = filterSustainSlider.value;
+});
+
+const filterReleaseSlider = document.getElementById("filterReleaseSlider");
+filterReleaseSlider.addEventListener('input', () => {
+    filterEnv.release = (filterReleaseSlider.value * 10) / 10;
+});
+
+const filterEnvAmountSlider = document.getElementById("filterEnvAmountSlider");
+filterEnvAmountSlider.addEventListener('input', () => {
+    filterEnv.max = filterEnvAmountSlider.value;
 });
