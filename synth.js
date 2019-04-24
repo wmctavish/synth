@@ -42,8 +42,8 @@ const synth2 = new Tone.Synth({
     reverb.toMaster();
 
     const delay = new Tone.FeedbackDelay({
-        "delayTime": 0,
-         "feedback": 0
+        "delayTime": 0.3,
+         "feedback": 0.4
     });
     delay.connect(reverb);
 
@@ -150,7 +150,6 @@ releaseSlider.addEventListener('input', () => {
 
 
 
-
 //Modulation sources
 const filterSlider = document.getElementById("filterSlider");
 filterSlider.addEventListener('input', () => {
@@ -231,11 +230,6 @@ gainSlider.addEventListener('input', () => {
 
 
 
-
-
-
-
-
 //Filter Envelope Controls
 const filterAttackSlider = document.getElementById("filterAttackSlider");
 filterAttackSlider.addEventListener('input', () => {
@@ -261,10 +255,6 @@ const filterEnvAmountSlider = document.getElementById("filterEnvAmountSlider");
 filterEnvAmountSlider.addEventListener('input', () => {
     filterEnv.max = filterEnvAmountSlider.value;
 });
-
-
-
-
 
 
 
