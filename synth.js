@@ -39,7 +39,7 @@ const synth2 = new Tone.Synth({
 
     const distortion = new Tone.Distortion({
         "distortion": 0.1,
-        "oversample": '4x',
+        "oversample": '2x',
         "wet": 0
     })
     distortion.connect(reverb);
@@ -102,7 +102,7 @@ const filterEnv = new Tone.ScaledEnvelope({
     "sustain": 0.5,
     "release": 0.1,
     "min": 0,
-    "max": 7000
+    "max": 1
 })
 filterEnv.connect(filter.frequency);
 
@@ -170,8 +170,10 @@ reverbWetSlider.addEventListener('input', () => {
 });
 
 const tempoSlider = document.getElementById("tempoSlider");
+const tempoDisplay = document.getElementById("tempoDisplay");
 tempoSlider.addEventListener('input', () => {
     Tone.Transport.bpm.value = tempoSlider.value; 
+    tempoDisplay.innerText = tempoSlider.value;
 });
 
 const distortionSlider = document.getElementById("distortionSlider");
@@ -224,4 +226,16 @@ filterReleaseSlider.addEventListener('input', () => {
 const filterEnvAmountSlider = document.getElementById("filterEnvAmountSlider");
 filterEnvAmountSlider.addEventListener('input', () => {
     filterEnv.max = filterEnvAmountSlider.value;
+});
+
+
+//Light/dark theme toggle
+document.getElementById("switch-theme").addEventListener('click', () => {
+    if (document.querySelector("body").style.backgroundColor = "white") {
+        document.querySelector("body").style.backgroundColor = "rgb(25,25,25)";
+        document.querySelector("body").style.color = "white";
+    } else {
+        document.querySelector("body").style.backgroundColor = "white";
+        document.querySelector("body").style.color = "rgb(25,25,25)";
+    };
 });
