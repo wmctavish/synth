@@ -7,27 +7,77 @@ body {
 .synthContainer {
     display: grid;
     grid-template-columns: auto auto auto;
-    width: 80%;
+    grid-gap: 0px;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.step-sequencer, .globalEnvelope, .detuneCntrl, .filterCntrl, .FX, .tempo, .modulation {
-    border: 1px solid white;
+.step-sequencer, .globalEnvelope, .detuneCntrl, .filterCntrl, .FX, .global, .modulation {
+    border: 1px solid rgb(0, 217, 255);
     color: white;
 }
 
-.globalEnvelope {
+.globalEnvelope, .detuneCntrl, .filterCntrl, .FX, .global, .modulation {
+    text-align: center;
     display: flex;
     flex-direction: column;
 }
 
+.FX input {
+    float: right;
+}
+
+.FX span {
+    float: left;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 5px;
+    border-radius: 3px;   
+    background: #0bff79;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%; 
+    background: rgb(250, 91, 255);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+ }
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+h3 {
+    font-family: 'VT323', monospace;
+}
+
+span {
+    font-family: 'Jura', sans-serif; 
+}
+
 .step-sequencer {
     width: 425px;
-    margin-right: auto;
-    margin-left: auto;
     grid-column: 2;
-    grid-row: span 3/-1;
+    grid-row: span 3/1;
     text-align: left
 }
 
