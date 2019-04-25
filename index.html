@@ -15,7 +15,12 @@
         <h2>Oscillators</h2>
 
         <div>
-            <span>Detune</span>
+            <span>Osc Level</span>
+            <input type="range" min='-64' max='0' value='-6' class="slider" id="oscLvlSlider">
+        </div>
+
+        <div>
+            <span>Osc Detune</span>
             <input type="range" min='0' max='50' value='0' class="slider" id="detuneSlider">
         </div>
 
@@ -27,6 +32,11 @@
                 <option value=triangle>Triangle</option>
                 <option value=sine>Sine</option>
             </select>
+        </div>
+
+        <div>
+            <span>Noise Level</span>
+            <input type="range" min='-64' max='0' value='-6' step="" class="slider" id="noiseSlider">
         </div>
     </div>
 

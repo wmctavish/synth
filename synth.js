@@ -9,6 +9,8 @@ document.documentElement.addEventListener(
       Tone.context.resume();
     }});
 
+
+//Oscillators
 const synth1 = new Tone.Synth({
     "oscillator": {
         "type": "sawtooth"
@@ -32,6 +34,18 @@ const synth2 = new Tone.Synth({
         "release": 1
         },
     "detune": 0
+});
+
+const noiseSynth = new Tone.NoiseSynth({
+    "noise": {
+        "type": "pink"
+        },
+    "envelope": {
+        "attack": 0.01 ,
+        "decay": 0.1 ,
+        "sustain": 0.5
+        },
+    "volume": -6
 });
 
 //Effects
@@ -67,6 +81,7 @@ gain.connect(filter);
 
 synth1.connect(gain);
 synth2.connect(gain);
+noiseSynth.connect(gain);
 
 
 //16-Step Sequencer
@@ -92,6 +107,7 @@ function repeat(time) {
     if (input.checked) 
         synth1.triggerAttackRelease(note, '8n', time),
         synth2.triggerAttackRelease(note, '8n', time),
+        noiseSynth.triggerAttackRelease('8n', time),
         filterEnv.triggerAttackRelease('8n');
     }
     index += 2;
@@ -126,18 +142,21 @@ const attackSlider = document.getElementById("attackSlider");
 attackSlider.addEventListener('input', () => {
     synth1.envelope.attack = attackSlider.value;
     synth2.envelope.attack = attackSlider.value;
+    noiseSynth.envelope.attack = attackSlider.value;
 });
 
 const decaySlider = document.getElementById("decaySlider");
 decaySlider.addEventListener('input', () => {
     synth1.envelope.decay = decaySlider.value;
     synth2.envelope.decay = decaySlider.value;
+    noiseSynth.envelope.decay = decaySlider.value;
 });
 
 const sustainSlider = document.getElementById("sustainSlider");
 sustainSlider.addEventListener('input', () => {
     synth1.envelope.susatin = sustainSlider.value;
     synth2.envelope.sustain = sustainSlider.value;
+    noiseSynth.envelope.sustain = sustainSlider.value;
 });
 
 const releaseSlider = document.getElementById("releaseSlider");
@@ -162,15 +181,30 @@ filterQSlider.addEventListener('input', () => {
     filter.Q.value = filterQSlider.value; 
 });
 
+//Oscillator volume
+const oscLvlSlider = document.getElementById("oscLvlSlider");
+oscLvlSlider.addEventListener('input', () => {
+    synth1.volume.value = oscLvlSlider.value;
+    synth2.volume.value = oscLvlSlider.value;
+});
+
+//Oscillator detune width
 const detuneSlider = document.getElementById("detuneSlider");
 detuneSlider.addEventListener('input', () => {
     synth2.detune.value = detuneSlider.value; 
 });
 
+//Oscillator type switch
 const oscType = document.getElementById("oscType");
 oscType.addEventListener('change', () => {
     synth1.oscillator.type = oscType.value; 
     synth2.oscillator.type = oscType.value;
+});
+
+//Noise level
+const noiseLvl = document.getElementById("noiseSlider");
+noiseLvl.addEventListener('input', () => {
+    noiseSynth.volume.value = noiseLvl.value;
 });
 
 //Delay time
