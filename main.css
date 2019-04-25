@@ -32,11 +32,12 @@ body {
     padding: 15px;
 }
 
-.FX input {
+.filterCntrl, .detuneCntrl, .globalEnvelope, .FX input {
     float: right;
 }
 
-.FX span {
+.filterCntrl, .detuneCntrl, .globalEnvelope, .FX span {
+    text-align: left;
     float: left;
 }
 

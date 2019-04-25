@@ -15,16 +15,6 @@
         <h2>Oscillators</h2>
 
         <div>
-            <span>Osc Level</span>
-            <input type="range" min='-64' max='0' value='-6' class="slider" id="oscLvlSlider">
-        </div>
-
-        <div>
-            <span>Osc Detune</span>
-            <input type="range" min='0' max='50' value='0' class="slider" id="detuneSlider">
-        </div>
-
-        <div>
             <span>Osc Type</span>
             <select id='oscType'>
                 <option value=sawtooth>Saw</option>
@@ -35,8 +25,18 @@
         </div>
 
         <div>
+            <span>Osc Level</span>
+            <input type="range" min='-64' max='-6' value='-6' class="slider" id="oscLvlSlider">
+        </div>
+
+        <div>
+            <span>Osc Detune</span>
+            <input type="range" min='0' max='50' value='0' class="slider" id="detuneSlider">
+        </div>
+
+        <div>
             <span>Noise Level</span>
-            <input type="range" min='-64' max='0' value='-6' step="" class="slider" id="noiseSlider">
+            <input type="range" min='-64' max='-6' value='-64' step="0.1" class="slider" id="noiseSlider">
         </div>
     </div>
 
@@ -44,8 +44,8 @@
             <h2>Effects</h2>
             
             <div id='distortion' class='distortion'>
-                <span>Distortion</span>
-                <input type="range" min='0' max='1' value='0' step='0.01' class="slider" id="distortionSlider">
+                <span>Bitcrusher</span>
+                <input type="range" min='1' max='8' value='8' step='0.01' class="slider" id="distortionSlider">
             </div>
 
             <div>
@@ -83,7 +83,7 @@
         <h2>Volume Envelope</h2>
         <div>
             <span>Attack</span>
-            <input type="range" min='0.001' max='0.3' step='0.001' value='0.001' class="slider" id="attackSlider">
+            <input type="range" min='0.001' max='1' step='0.001' value='0.001' class="slider" id="attackSlider">
         </div>
         <div>
             <span>Decay</span>
@@ -908,8 +908,8 @@
         </div>
 
         <div>
-            <button style="background-color: white; color: rgb(25,25,25)" id="switch-theme" onclick="switchTheme()">Switch Theme</button>
-            <button style="background-color: white; color: rgb(25,25,25)" id="seqStart">Start/Stop Sequence</button>
+            <button style="background-color: white; color: rgb(25,25,25);" id="switch-theme" onclick="switchTheme()">Switch Theme</button>
+            <button style="background-color: white; border-color: rgb(117, 255, 174); color: rgb(117, 255, 174);" id="seqStart">Start/Stop Sequence</button>
         </div>
     </div>
 

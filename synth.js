@@ -45,7 +45,7 @@ const noiseSynth = new Tone.NoiseSynth({
         "decay": 0.1 ,
         "sustain": 0.5
         },
-    "volume": -6
+    "volume": -64
 });
 
 //Effects
@@ -62,22 +62,23 @@ const noiseSynth = new Tone.NoiseSynth({
     });
     delay.connect(reverb);
 
-    const distortion = new Tone.Distortion({
-        "distortion": 0.1,
-        "oversample": '2x',
-        "wet": 0
-    })
-    distortion.connect(delay);
-
     const filter = new Tone.Filter({
         "type": "lowpass",
         "frequency": 7000,
         "Q": 0
     });
-    filter.connect(distortion);
+    filter.connect(delay);
+
+    const distortion = new Tone.BitCrusher({
+        "bits": 8,
+        "wet": 0
+    })
+    distortion.connect(filter);
+
+    
 
 const gain = new Tone.Gain(1);
-gain.connect(filter);
+gain.connect(distortion);
 
 synth1.connect(gain);
 synth2.connect(gain);
@@ -95,6 +96,13 @@ Tone.Transport.scheduleRepeat(repeat, '8n');
 const seqStart = document.getElementById("seqStart");
 seqStart.addEventListener('click', () => {
     Tone.Transport.toggle();
+    if(button2.style.borderColor === "rgb(117, 255, 174)") {
+        button2.style.color = "rgb(255, 70, 70)";
+        button2.style.borderColor = "rgb(255,70,70)";
+    } else {
+        button2.style.color = "rgb(117,255,174)";
+        button2.style.borderColor = "rgb(117,255,174)";
+    };
 });
 
 
@@ -225,16 +233,19 @@ delayWetSlider.addEventListener('input', () => {
     delay.wet.value = delayWetSlider.value; 
 });
 
+//Reverb room size
 const reverbSizeSlider = document.getElementById("reverbSizeSlider");
 reverbSizeSlider.addEventListener('input', () => {
     reverb.roomSize.value = reverbSizeSlider.value; 
 });
 
+//Reverb wet.dry
 const reverbWetSlider = document.getElementById("reverbWetSlider");
 reverbWetSlider.addEventListener('input', () => {
     reverb.wet.value = reverbWetSlider.value; 
 });
 
+//Tempo slider
 const tempoSlider = document.getElementById("tempoSlider");
 const tempoDisplay = document.getElementById("tempoDisplay");
 tempoSlider.addEventListener('input', () => {
@@ -242,11 +253,13 @@ tempoSlider.addEventListener('input', () => {
     tempoDisplay.innerText = tempoSlider.value;
 });
 
+//Bitchrusher bits
 const distortionSlider = document.getElementById("distortionSlider");
 distortionSlider.addEventListener('input', () => {
-    distortion.distortion = distortionSlider.value;
+    distortion.bits = distortionSlider.value;
 });
 
+//Bitcrusher wet/dry
 const distortionWetSlider = document.getElementById("distortionWetSlider");
 distortionWetSlider.addEventListener('input', () => {
     distortion.wet.value = distortionWetSlider.value;
@@ -303,10 +316,10 @@ filterEnvAmountSlider.addEventListener('input', () => {
 
 
 //Light/dark theme toggle
+const button2 = document.getElementById("seqStart");
 function switchTheme() {
     const bodyBC = document.querySelector("body");
     const button1 = document.getElementById("switch-theme");
-    const button2 = document.getElementById("seqStart");
     //const bodyTC = document.querySelector()
     if (bodyBC.style.backgroundColor === "white") {
         bodyBC.style.backgroundColor = "rgb(25,25,25)";
@@ -314,14 +327,12 @@ function switchTheme() {
         button1.style.backgroundColor = "rgb(25,25,25)";
         button1.style.color = "white";
         button2.style.backgroundColor = "rgb(25,25,25)";
-        button2.style.color = "white";
     } else {
         bodyBC.style.backgroundColor = "white";
         bodyBC.style.color = "rgb(25,25,25)";
         button1.style.backgroundColor = "white";
         button1.style.color = "rgb(25,25,25)";
         button2.style.backgroundColor = "white";
-        button2.style.color = "rgb(25,25,25)";
     }
 };
     
