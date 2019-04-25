@@ -41,9 +41,10 @@ const synth2 = new Tone.Synth({
     });
     reverb.toMaster();
 
-    const delay = new Tone.FeedbackDelay({
-        "delayTime": 0.3,
-         "feedback": 0.4
+    const delay = new Tone.PingPongDelay({
+        "delayTime": 0,
+        "feedback": 0,
+        "wet": 0
     });
     delay.connect(reverb);
 
@@ -52,7 +53,7 @@ const synth2 = new Tone.Synth({
         "oversample": '2x',
         "wet": 0
     })
-    distortion.connect(reverb);
+    distortion.connect(delay);
 
     const filter = new Tone.Filter({
         "type": "lowpass",
@@ -61,7 +62,7 @@ const synth2 = new Tone.Synth({
     });
     filter.connect(distortion);
 
-const gain = new Tone.Gain(0.1);
+const gain = new Tone.Gain(1);
 gain.connect(filter);
 
 synth1.connect(gain);
@@ -172,14 +173,22 @@ oscType.addEventListener('change', () => {
     synth2.oscillator.type = oscType.value;
 });
 
+//Delay time
 const delayTimeSlider = document.getElementById("delayTimeSlider");
 delayTimeSlider.addEventListener('input', () => {
     delay.delayTime.value = delayTimeSlider.value; 
 });
 
+//Delay feedback
+const delayFeedbackSlider = document.getElementById("delayFeedbackSlider");
+delayFeedbackSlider.addEventListener('input', () => {
+    delay.feedback.value = delayFeedbackSlider.value; 
+});
+
+//Delay wet/dry
 const delayWetSlider = document.getElementById("delayWetSlider");
 delayWetSlider.addEventListener('input', () => {
-    delay.feedback.value = delayWetSlider.value; 
+    delay.wet.value = delayWetSlider.value; 
 });
 
 const reverbSizeSlider = document.getElementById("reverbSizeSlider");
@@ -224,7 +233,7 @@ filterLFOAmpSlider.addEventListener('input', () => {
 //Master gain control
 const gainSlider = document.getElementById("gainSlider");
 gainSlider.addEventListener('input', () => {
-    Tone.Master.volume = gainSlider.value;
+    gain.gain.value = gainSlider.value;
 });
 
 
