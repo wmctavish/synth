@@ -126,7 +126,7 @@ function repeat(time) {
         synth1.triggerAttackRelease(note, '8n', time),
         synth2.triggerAttackRelease(note, '8n', time),
         noiseSynth.triggerAttackRelease('8n', time),
-        filterEnv.triggerAttackRelease('8n'),
+        filterEnv.triggerAttackRelease('8n');
         //lightUp();
     }};
     index += 2;
