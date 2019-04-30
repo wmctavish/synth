@@ -105,15 +105,6 @@ seqStart.addEventListener('click', () => {
     };
 });
 
-
-function lightUp() {
-    label.style.boxShadow = "0px 0px 10px 3px rgb(255,255,255)";
-    setTimeout(function() {
-        label.style.boxShadow = "0px 0px 5px 2px rgb(87, 87, 196)";
-    }, 1000);
-};
-
-
 function repeat(time) {
     let step = index % 32;
     
@@ -122,14 +113,20 @@ function repeat(time) {
         row = rows[i],
         input = row.querySelector(`input:nth-child(${step + 2})`);
         label = row.querySelector(`label:nth-child(${step + 3})`);
+        allLabels = document.querySelectorAll('label');
     if (input.checked) {
         synth1.triggerAttackRelease(note, '8n', time),
         synth2.triggerAttackRelease(note, '8n', time),
         noiseSynth.triggerAttackRelease('8n', time),
-        filterEnv.triggerAttackRelease('8n');
-        //lightUp();
+        filterEnv.triggerAttackRelease('8n'),
+        label.className = "step-box-lit";
     }};
     index += 2;
+    if (step===30) {
+        for (i=0;i<allLabels.length;i++) {
+            allLabels[i].className = "step-box";
+        };
+    };
 };
 
 
