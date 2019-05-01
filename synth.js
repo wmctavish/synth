@@ -48,6 +48,7 @@ const noiseSynth = new Tone.NoiseSynth({
     "volume": -64
 });
 
+
 //Effects
     const reverb = new Tone.Freeverb({
         "roomSize": 0.1,

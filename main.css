@@ -26,19 +26,18 @@ body {
 
 .globalEnvelope, .detuneCntrl, .filterCntrl, .FX, .global, .modulation {
     width: 500px;
-    text-align: center;
     display: flex;
     flex-direction: column;
     padding: 15px;
+    text-align: left;
 }
 
-.filterCntrl, .detuneCntrl, .globalEnvelope, .FX input {
+.globalEnvelope input, .detuneCntrl input, .filterCntrl input, .FX input, .global input, .modulation input {
     float: right;
 }
 
-.filterCntrl, .detuneCntrl, .globalEnvelope, .FX span {
-    text-align: left;
-    float: left;
+.globalEnvelope h2, .detuneCntrl h2, .filterCntrl h2, .FX h2, .global h2, .modulation h2 {
+    text-align: center;
 }
 
 
@@ -82,6 +81,7 @@ h2 {
 h3 {
     font-family: 'VT323', monospace;
     margin: 15px 0 15px 0;
+    text-align: center;
 }
 
 span {
@@ -132,17 +132,15 @@ input[type=checkbox]:checked + label {
     padding: 0 0 0 0px;
 }
 
-.global {
-    text-align: center;
-}
-
 .global button {
+    text-align: center;
     width: 170px;
     font-family: 'Orbitron', sans-serif;
     font-size: 15px;
     margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
+    display: block;
     cursor: pointer;
     background-color: white;
     border: 2px solid rgb(44, 44, 97);
@@ -160,6 +158,8 @@ input[type=checkbox]:checked + label {
 
 .tempoDisplay {
     width: 35px;
+    height: 18px;
+    padding: 1px;
     border: 2px solid rgb(51, 51, 51);
     border-radius: 4px;
     text-align: center;
