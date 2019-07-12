@@ -1,7 +1,7 @@
 # S Y N T H
 S Y N T H is a browser synthesizer with a 16-step sequencer at its center. It is divided into 7 core components - Oscillators, Volume Envelope, Filter Modulation, Effects, Filter, Global, and the center step sequencer. Selecting notes on the sequencer allows the user to create a repteating melody, which may be started & stopped, as well as sped up or slowed down, using the controls found under the "Global" component.
 
-##QUICK START GUIDE
+## QUICK START GUIDE
 
 _NOTE: Currently_ S Y N T H _is only compatible with Google Chrome. The Filter cutoff must also be adjusted by any increment in order for volume to function_
 
