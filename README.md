@@ -1,9 +1,15 @@
 # S Y N T H
-Browser synth with step sequencer
+S Y N T H is a browser synthesizer with a 16-step sequencer at its center. It is divided into 7 core components - Oscillators, Volume Envelope, Filter Modulation, Effects, Filter, Global, and the center step sequencer. Selecting notes on the sequencer allows the user to create a repteating melody, which may be started & stopped, as well as sped up or slowed down, using the controls found under the "Global" component.
+
+##QUICK START GUIDE
+
+_NOTE: Currently_ S Y N T H _is only compatible with Google Chrome. The Filter cutoff must also be adjusted by any increment in order for volume to function_
+
+To begin working with some sound, select at least one note on the step sequencer. Adjust the "cutoff" slider under the "Filter" component by any amount, and then press the "Start/Stop Sequence" button under the "Global" component. As you select more notes, you can begin to construct a pattern or melody. The "Filter" and "Volume Envelope" sections will give immediately noticeable results for basic sound-shaping. 
 
 ## Oscillators
 ### Osc Type
-Using the dropdown selector, choose from a saw, square, triangle, or sine oscillator. The sequence may need to be stopped and re-started forthe change to take effect. Saw and square will give the most harmonic content to shape using the Filter section.
+Using the dropdown selector, choose from a saw, square, triangle, or sine oscillator. The sequence may need to be stopped and re-started for the change to take effect. Saw and square will give the most harmonic content to shape using the Filter section.
 
 ### Osc Level
 Sets the volume level of the oscillator with the adjacent slider.
