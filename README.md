@@ -37,3 +37,14 @@ Unlike other three envelope controls 'Sustain' is a _level_ rather than a _time_
 
 ### Release
 The 'Release' phase refers to the length of time a note will fade out once a new step in the sequence has been triggered. A Release time of 0 will cause the note volume to immediately drop to silence from the preceding Sustain level. Maximum Release time will cause the note to fade over several seconds. _Note:_ as the synthesizer is monophonic (1 note at a time), the release phase will be cut-off at whatever point it is at once a new note is triggered - the new note will restart the Volume Envelope for it's duration.
+
+
+## Filter Modulation
+__"LFO"__
+### Cutoff Rate
+The filter LFO (**L**ow **F**requency **O**scillator modulates the filter cutoff based on a sine wave pattern. The adjacent slider adjusts the speed of this LFO.
+
+### Depth
+The "Depth" parameter controls how far from the filter's set cutoff point the cutoff will oscillate. Increaseing the adjacent slider will make the cutoff oscillate, while lower settings will make more a smaller amount of movement of the filter cutoff.
+
+__"Envelope"__
